@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --hue: 14;
+    --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
+    --first-color: hsl(var(--hue), 91%, 54%);
+    --first-color-alt: hsl(var(--hue), 91%, 50%);
+    --title-color: hsl(var(--hue), 4%, 100%);
+    --text-color: hsl(var(--hue), 4%, 85%);
+    --text-color-light: hsl(var(--hue), 4%, 55%);
+    --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-black: 900;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --button-padding: 1rem 1.75rem;
+    --transition: all .3s ease;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 1rem 27%;
+    background: var(--body-color);
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+img {
+    height: 200px;
+}
+
+
+/* ======================header======================= */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin: 1rem 27%;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header .left .logo {
+    margin-left: -40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+header .left .logo-img {
+    height: 1.3rem;
+}
+
+header .right .items {
+    margin-right: -50px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+header .right .items a {
+    transition: all .3s ease;
+}
+
+header .right .items a:hover {
+    color: var(--first-color);
+}
+
+header .right .support {
+    border: 2px solid white;
+    padding: 12px 20px;
+    border-radius: 2rem;
+}
+
+/*=================================== Home======================= */
+
+.home-1 {
+    margin-top: 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    animation: pop 2s ease;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: translateX(-55px);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.home-1 a {
+    transition: var(--transition);
+}
+
+.home-1 a:hover {
+    background: var(--first-color-alt);
+}
+
+.home-1-left .img {
+    height: 27rem;
+    transition: var(--transition);
+}
+
+.home-1-left .img:hover {
+    transform: translateY(-10px);
+}
+
+
+.home-1-right h1 {
+    margin-top: 27px;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.2rem;
+    margin-bottom: 27px;
+}
+
+.home-1-down .book-now {
+    padding: var(--button-padding);
+    background: var(--first-color);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.home-1-down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-1-down .track-record {
+    padding: var(--button-padding);
+    background: var(--first-color);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.home-1-right p {
+    width: 450px;
+}
+
+.home-1-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =============scare category============= */
+
+.scare-category {
+    margin-top: 200px;
+    animation: pop 2s ease;
+}
+
+.scare-category .category-title .title {
+    text-align: center;
+}
+
+.scare-category .category-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.scare-category .category-items img {
+    height: 200px;
+}
+
+.scare-category .category-items {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    margin-bottom: var(--mb-2-5);
+}
+
+.scare-category .category-items .item-1,
+.scare-category .category-items .item-2,
+.scare-category .category-items .item-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scare-category .category-items p {
+    margin-top: .6rem;
+    text-align: center;
+}
+
+.scare-category .category-items img {
+    margin-bottom: 1.25rem;
+    transition: all .3s ease;
+}
+
+.scare-category .category-items img:hover {
+    transform: translateY(-15px);
+}
+
+/* ================halloween night================== */
+.halloween-night {
+    margin-top: 150px;
+    color: white;
+    display: flex;
+    gap: 13rem;
+    align-items: center;
+    justify-content: space-between;
+    animation: pop 2s ease;
+}
+
+.halloween-night img {
+    height: 500px;
+    transition: var(--transition);
+    animation: jump 2s infinite ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(8px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(8px);
+    }
+}
+
+.halloween-night img:hover {
+    transform: translateY(-15px);
+}
+
+.halloween-night .title {
+    margin-bottom: var(--mb-2-5);
+    font-size: 2.2rem;
+}
+
+.halloween-night p {
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+.halloween-night .know-more {
+    padding: var(--button-padding);
+    background-color: var(--first-color);
+    border-radius: 10px;
+}
+
+.halloween-night a:hover {
+    background: var(--first-color-alt);
+}
+
+/* ============================trick or treat===================== */
+
+.tot {
+    margin-top: 130px;
+    animation: pop 2s ease;
+}
+
+.tot .tot-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.tot .tot-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.tot .tot-cards img {
+    height: 100px;
+}
+
+.tot-cards h5 {
+    font-weight: 200;
+}
+
+.tot-cards .toffee {
+    font-weight: 500;
+}
+
+.tot-cards .price {
+    font-weight: 400;
+}
+
+.tot-card {
+    background: var(--container-color);
+    border-radius: 25px;
+    overflow: hidden;
+    width: fit-content;
+    padding: 1.8rem 3rem;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.tot-card img {
+    transition: var(--transition);
+}
+
+.tot-card:hover img {
+    transform: translateY(-15px);
+}
+
+.tot-card i {
+    display: block;
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: 5px 5px 20px 5px;
+    background: var(--first-color);
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+    transition: var(--transition);
+}
+
+.tot-card:hover i {
+    right: 0px;
+}
+
+/* ================new================ */
+.new {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: pop 2s ease;
+    padding: 2rem 5rem;
+    width: 40vw;
+    background: var(--container-color);
+    border-radius: 70px;
+    margin-left: -30px;
+    animation: pop 2s ease;
+}
+
+.new .new-left .new-image {
+    height: 250px;
+}
+
+.new .new-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.new .new-right .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.new .new-right .new-button {
+    padding: var(--button-padding);
+    background-color: var(--first-color);
+    border-radius: 10px;
+    margin-top: 25px;
+    transition: var(--transition);
+}
+
+.new .new-right .new-button:hover {
+    background: var(--first-color-alt);
+}
+
+/* =====================new arrivals================= */
+.new-arr {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pop 2s ease;
+}
+
+.new-arr-title .title {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.new-arr-content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.new-arr .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: var(--container-color);
+    padding: 2rem 4.3rem;
+    border-radius: 20px;
+    position: relative;
+    width: 160px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.new-arr .card:hover img {
+    transform: translateY(-8px);
+}
+
+.new-arr .prices {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.new-arr .og-price {
+    font-size: .75rem;
+    color: var(--first-color-alt);
+    text-decoration: line-through;
+}
+
+.new-arr .card-title {
+    margin-top: 1rem;
+}
+
+.new-arr img {
+    transition: var(--transition);
+    height: 150px;
+}
+
+.new-arr .new-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--first-color);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.new-arr .new-button:hover {
+    background: var(--first-color-alt);
+}
+
+.new-arr .card-title-3 {
+    width: max-content;
+}
+
+.new-arr i {
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: 5px 5px 20px 5px;
+    background: var(--first-color);
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+    transition: var(--transition);
+}
+
+.new-arr .card:hover i {
+    right: 0px;
+}
+
+.new-arr i:hover {
+    background: var(--first-color-alt);
+}
+
+/* =================news letter============== */
+
+.newsletter {
+    margin-top: 150px;
+    animation: pop 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-h1 {
+    margin-bottom: 50px;
+}
+
+.newsletter .newsletter-input {
+    height: 90px;
+    width: 500px;
+    background: var(--container-color);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.newsletter form {
+    position: relative;
+}
+
+.newsletter .newsletter-button {
+    padding: var(--button-padding);
+    background: var(--first-color);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    bottom: auto;
+    height: 60px;
+    transition: var(--transition);
+    font-weight: 700;
+}
+
+.newsletter .newsletter-p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.newsletter .newsletter-button:hover {
+    background: var(--first-color-alt);
+}
+
+.newsletter .newsletter-input::placeholder {
+    color: white;
+}
+
+.newsletter .newsletter-input {
+    padding-left: 2rem;
+    color: white;
+}
+
+/* ==================footer=============== */
+
+.footer .halloween .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.footer .halloween .logo-img {
+    height: 1.3rem;
+}
+
+.footer {
+    animation: pop 2s ease;
+    margin-top: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer .column {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.footer i {
+    margin-top: 50px;
+    margin-right: 10px;
+    padding: .3rem;
+    background: var(--container-color);
+    border-radius: 8px;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+}
+
+.footer-img .footer-1,
+.footer-2 {
+    animation: pop 2s ease;
+    position: absolute;
+    margin-top: -150px;
+    height: 235px;
+}
+
+.footer-img .footer-1 {
+    left: -3rem;
+    transition: var(--transition);
+}
+
+.footer-img .footer-2 {
+    right: -2rem;
+    transition: var(--transition);
+}
+
+.footer-img .footer-1:hover , .footer-img .footer-2:hover{
+    transform: translateY(-10px);
+}
+
+/* =================rights================= */
+
+.rights {
+    animation: pop 2s ease;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.rights h5 {
+    font-weight: 300;
+}
